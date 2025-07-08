@@ -61,7 +61,7 @@ Replace `<network>` with `sepolia`, `localhost`, or another configured network. 
 
 Run the main script to mint or query NFTs:
 ```bash
-npx hardhat run scripts/main.js
+npx hardhat run scripts/main-funtion.js
 ```
 
 **Options**:
@@ -81,7 +81,7 @@ npx hardhat run scripts/main.js
 
 Run the resale script to transfer NFT ownership:
 ```bash
-npx hardhat run scripts/resale.js
+npx hardhat run scripts/simulate-trade.js
 ```
 
 **Steps**:
@@ -92,8 +92,8 @@ npx hardhat run scripts/resale.js
 ## File Structure
 
 - `contracts/AIGenNFT.sol`: NFT smart contract
-- `scripts/main.js`: Minting and lookup script
-- `scripts/resale.js`: NFT resale script
+- `scripts/main-funtion`: Minting and lookup script
+- `scripts/simulate-trade.js`: NFT resale script
 - `contract-address.json`: Deployed contract address
 - `all-metadata.json`: Metadata for all minted NFTs
 - `node_output.txt`: Optional file for account addresses/private keys
@@ -123,17 +123,17 @@ npx hardhat run scripts/resale.js
 ## Example Workflow
 
 1. **Mint an NFT**:
-   - Run `main.js`, select option 1 (URL) or 2 (AI prompt).
+   - Run `main-funtion`, select option 1 (URL) or 2 (AI prompt).
    - Provide image URL or AI prompt, NFT name, and description.
    - Image and metadata are uploaded to IPFS, and the NFT is minted.
 
 2. **Resale an NFT**:
-   - Run `resale.js`, select an NFT by index.
+   - Run `simulate-trade.js`, select an NFT by index.
    - Enter sale price (e.g., 1 ETH).
    - NFT is transferred with royalties paid.
 
 3. **Lookup an NFT**:
-   - Run `main.js`, select option 3.
+   - Run `main-funtion.js`, select option 3.
    - Query by token ID (on-chain) or metadata fields (local).
 
 ## Notes
